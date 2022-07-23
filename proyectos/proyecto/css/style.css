@@ -1,0 +1,63 @@
+
+.flex-container{
+    display:flex;
+    flex-wrap:wrap;/* Aca decimos que al terminar la fila comiece abajo de nuevo */
+    justify-content: center;
+    color: #333;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;/*Para que no haya desplayamiento en x vacio*/
+}
+
+.flex-item{
+    flex-grow: 1;
+    
+    margin: 20px;
+    max-width: 300;/*distancia hacia el lado*/
+    border: 2px solid rgb(118, 35, 35);
+    padding:0 10px;
+
+}
+.flex-item:hover{
+    border-color: rgb(231, 13, 13);
+    box-shadow: 0px 0px 13px #71a154;
+}
+.flex-item:focus{
+    border-color: rgb(231, 13, 13);
+    box-shadow: 0px 0px 13px #71a154;
+}
+h2,h3{
+    margin: 0;
+}
+
+h3{
+    color: #666;
+}
+
+b{ 
+    color: rgb(17, 215, 57);
+}
+
+.llave1{
+    width: 300px;
+    
+
+}
+
+form{
+    text-align: center;
+    padding: 50px;/*espacio alrededor*/
+}
+input[type="submit"]{
+    background: #321a9d;
+    color:#fff;
+    font-weight:bolder;
+    border:none;
+    padding: 12px 40px;/*distancia de marco superior, marcos laterales*/
+    font-size: 20px;
+    letter-spacing: 2px;/*Espacio entre letras*/
+
+
+
+}

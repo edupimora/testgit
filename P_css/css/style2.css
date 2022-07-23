@@ -1,0 +1,50 @@
+
+/*POSICION ABSOLUTE PERMITE QUE LOS OBJETOS TENGAS OTRO
+4 PARAMETROS QUE PERMITEN SU MOVIMIENTO*/
+div{
+    display: block;
+    background:green;
+    position: absolute;
+}
+
+div div{
+    height: 100px;
+    width: 100px;
+    background: yellow;
+}
+
+.padre{
+    position:relative;/*al ser relativ, los hijos lo toman como referencia*/
+    border: 4px solid red;
+    margin:50px auto;/*Con auto centramos en el eje x, no funciona een y*/
+    height:450px;
+    width:450px;
+
+}
+
+.hijo1 {
+
+}
+.hijo2{
+    right: 0;
+    
+}
+.hijo3{
+    right: 0;
+    bottom: 0;
+
+}
+.hijo4{
+    bottom: 0;
+}
+.hijo5{
+    /* margin: 175px; */
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin: auto;
+
+
+
+}

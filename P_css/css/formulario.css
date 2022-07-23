@@ -1,0 +1,92 @@
+*{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;/*alineacion vertical
+    */
+    flex-wrap: wrap;/*para cuando sea responsive se pueda deslizar*/
+    justify-content: center;
+    background: #444;
+    margin:50px 50px;
+
+
+
+
+}
+.form{
+    min-width: 200px;
+    flex:1;
+    text-align: center;
+    padding:30px;
+    order:5;
+}
+
+.form_input{
+   
+    width: 100%;
+    padding:8px;
+    margin: 7px 0;
+    border: none;
+    border-bottom: 3px solid #5dd;
+    background:transparent;
+    color: white;
+
+
+
+}
+.form_input:focus{
+    background:linear-gradient(to bottom, transparent,#333);
+
+    outline: none;
+    border-bottom: 3px solid white;
+}
+
+
+
+.form textarea{
+    min-height: 150px;
+    resize: none;
+    color: white;
+}
+
+
+.form_img{
+    flex:1;
+    padding: 20px;
+    min-width: 200px;/*que tamano debe tener para que se deslice abajo*/
+    order:1;
+}
+.img_container{
+    display: flex;/*asi lo centramos*/
+    margin:auto;/*asi lo centramos*/
+    border-radius: 100%;
+    background-color: white   ;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    min-width: 100px;
+
+}
+.form_img img{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    border-radius: 80%;
+   
+}
+.form input[type="submit"]{
+    background-color: #094;
+    border-bottom: none;
+}
+.form input[type="submit"]:hover{
+    background-color: #5f9;
+    border-bottom: none;
+}
+.form input[type="submit"]:active{
+    background:linear-gradient(to bottom, transparent,#072);
+
+}

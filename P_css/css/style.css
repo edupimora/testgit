@@ -1,0 +1,99 @@
+.contact-form__p-h1{
+    font-size: 30px;/*tamano de la letra*/
+
+    /*em = el ordenador da la medida, normalmente son 16px*/
+    background-color: blue;
+    width: 80vw;/*lo que ocupa LA CAJA QUE LA CONTIENE de la pantalla horizontal, aca es el 50%*/
+    height: 20vh;/*lo que ocupa vertical*/
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 2;/*ESPACIO ENTRE LINEAS*/
+    font-weight: normal;/*grosor de la letra*/
+
+    position: fixed;
+
+   
+    
+
+    /*BLOQUES*/
+
+
+}
+a{
+    font-size: large;
+    display: inline-block;
+    width: 100px;/*solo con display pueod aplicar*/
+    height: 100px;
+    padding: 0 30px;
+
+}
+h2{
+    background-color: brown;
+    display:inline-block;/*que ocupe solo una parte del bloque*/
+    line-height: 50px;
+    padding: 20px 20px;/*distancia entre el texto y la caja, (y x), (top reight botton left)*/
+    text-align: center;
+    box-sizing: border-box;
+    margin:100px 30px ;/*distancia entre cajas(y x)(*/
+    border-radius: 50px;/*4px sold blue*/
+
+    box-shadow:2px 5px 10px 10px rgb(32, 170, 66) ;/*x y tamanodesombra cuantoborde color*/
+
+    text-shadow: 2px 3px 7px white;
+
+    transform: rotate(10deg);/*pasa por encima de lo que esta fijo*/
+  /*  width:20px;
+    height: 40px;    modificamos el padding*/
+}
+.position{
+    background-color: black;
+    color: aliceblue;
+    /* width:100px; permite estos cambios por que es un elemto en linea, no ocupa un bloque
+    height: 10px; MODIFICA EL ANCHO Y ALTO DEL CONTENIDO */
+    
+}
+.caja1{
+    display: inline-block;
+    margin: 20px 50px;/*distancia alrededor de la caja*/
+    /*margin:auto; LAS CENTRAMOS*/
+    background-color: yellow;
+    padding: 20px 50px;
+    border:10px solid red;
+    box-sizing: content-box;
+    
+}
+.caja2{
+    display: inline-block;
+    margin:20px 50px;
+    background-color: blueviolet;
+    padding:50px 80px 
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    display: block;
+
+}
+
+.c1{
+    background-color: burlywood;
+    position: absolute;/* el espacio recervado para este elemento ya no esta*/
+    /*tambien se ajusta el tamano de la caja al contenido*/
+}
+.c2{
+    background-color: orange;
+    position: relative;
+    top: 20px; left:20px;
+    z-index: 1;/*da prioridad*/
+}
+.c3{
+    background-color: olivedrab;
+    /* position: relative; */
+}
+.c4{
+    background-color: greenyellow;
+    
+    opacity: 0.2;
+    margin-left: 200px;
+}

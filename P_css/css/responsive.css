@@ -1,0 +1,70 @@
+*{
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+a{
+    display: block;
+}
+div{
+    /* width: 45%; */
+    display: inline-block;
+    padding: 20px;
+    background: #ddd;
+}
+p{
+    font-size: 20px;
+}
+.caja2{
+    background: #bbb;
+}
+h5{
+    background-color: black;
+}
+
+.flex-container{
+    display: flex;
+    /*Flex direction es una propiedad que se le aplica al 
+    contenedor para afectar los items*/
+    flex-direction: row-reverse;/*cambia la direccion de escritura*/
+    flex-wrap: wrap;/*a modificar el tamano de la pantalla
+    no s emodifican los elemento si no se re oganizan para
+    mantener sus caracteristicas*/
+
+    justify-content: center;/*centramos el contenido*/
+
+    align-items: flex-start;
+
+
+}
+.flex-item{
+    background-color: #48e;
+    color:#fff;
+    padding: 10px;
+    margin: 10px;
+    /*el flex ajusta los objetos para que tengan siempre la misma altura
+    no importa el ancho*/
+    height: 300px;
+    width:300px;
+    /* LAS SIGUIENTES PROPIEDADES SON PARA ITEMS DE UN FLEX CONTAINER */
+
+    flex-grow:1;/*el espacio que sobra lo asigna a cada uno de los elementos
+    esto se lo puedo asignar a un elemento individual*/
+
+    
+}
+.green{
+    background:green;
+    align-self:baseline;
+    flex-shrink: 2;/*el valor que sede cuando el tamano de las cajas
+    cambian, todas tienen 1 por defecto*/
+}
+
+
+
+
+@media only screen and (max-width: 500px){/*cuando la pantalla llegue a 500px
+    haga lo siguiente*/
+
+
+}
