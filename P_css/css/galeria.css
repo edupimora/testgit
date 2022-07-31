@@ -1,0 +1,332 @@
+*{
+    font-family: sans-serif;
+    font-weight: 30px;
+}
+h1, h2{
+    display: block;
+    text-align: center;
+}
+
+body{
+    background:radial-gradient(circle,#fff,#bbb);
+    padding: 15px;
+    display: grid;
+}
+
+.grid-container{
+    display: grid   ;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-auto-rows: 120px;
+    grid-gap: 10px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*se adapta el tamano de la imagen*/
+}
+img:first-child {
+    
+    grid-column: 1/3;
+    grid-row: 1/3;
+    
+}
+img:nth-child(6){
+    grid-row: span 3;
+}
+
+/*-----------------DIV RESPONSIVE--------------*/
+
+.div-responsive{
+    background-color: rgb(85, 178, 204);
+}
+
+@media screen and (min-width:500px) and (max-width:650px)/*si tiene menos de 600 px, no haga nada*/{
+    .div-responsive{
+        background-color: red;
+    }
+}
+
+@media screen and (min-width:700px){
+    .div-responsive{
+    background: green;
+    font-size: 30px;
+    }
+}
+/*---------------------------------------------*/
+
+
+.content{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .main, .aside, .footer{
+    padding:20px;
+ 
+}
+.header{
+    background: rgb(81, 195, 233);
+    flex-basis: 60px;
+
+}
+.main{
+    background: aliceblue;
+    flex-basis: 300px;
+    flex-grow: 20;
+    flex-shrink: 0;
+}
+.aside{
+    background: rgb(6, 99, 4);
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+}
+.footer{
+    background: rgb(201, 7, 7);
+    flex-grow: 3;
+    flex-basis: 100%;
+}
+
+@media screen and (min-width:600px)
+{
+    .content{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .main, .aside{
+        height:500px
+    }
+    .main{
+        flex-grow: 4;
+    }
+
+    .aside{ 
+        background: #c95;
+        flex-grow: 1;
+    }
+    .header{
+        flex-basis: 100%;
+        max-height:20px;
+    }
+
+    .footer{
+        flex-basis: 100%;
+    }
+}
+/* ------------Transiciones------------- */
+
+
+.trans{
+    height: 700px;
+    background: slateblue;
+    padding: 30px;
+}
+
+.caja{
+    background: rgb(229, 109, 109);
+    height: 100px;
+    width: 100px;
+    transition-property: left, background;
+    transition-duration: 2s, 1s;
+    /* transition-delay: 1s; */
+    margin: 30px;
+    /* background: inherit;hereda el color de el contenedor */
+    border: 1px solid black;
+    position: relative;
+    left:0;
+
+    
+}
+.trans:hover >.caja{
+    left:80%;
+    background: blanchedalmond;
+}
+
+
+
+
+.caja:hover{
+    background: black;
+}
+.caja:first-child{
+    transition-timing-function: linear;
+
+}
+.caja:nth-child(2){
+    transition-timing-function: ease;
+
+}
+.caja:nth-child(3){
+    transition-timing-function: ease-in;
+    
+}
+.caja:nth-child(4){
+    transition-timing-function:ease-in-out ;
+    
+}
+.caja:nth-child(5){
+    transition-timing-function: ease-out;
+    
+}
+
+/* -------------------ANIMACIONES-------------- */
+.animacion{
+    height: 500px;
+    background: orange;
+    padding: 30px;
+
+}
+.caja1{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background: blue;
+    animation-name: desplazarse;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*  */
+}
+
+@keyframes desplazarse {
+    /* from{
+        position: relative;
+        left:0;
+
+    }
+    to{
+        left:80%;
+
+
+    } */
+    0%{
+       
+        left:0;
+        background: #025;
+
+    }
+    50%{
+        background: red;
+
+
+    }
+
+    100%{
+        left:90%;
+        background: white ;
+
+
+    }
+
+
+
+}
+
+/* --------------------TRANSFORM ---------------- */
+
+.transform{
+    height: 500px;
+    background: #025;
+    padding: 30px;
+}
+.caja2{
+    height: 80px;
+    width:80px;
+    background: #bbb;
+    display: flex;
+    transform: translate(100%,100%);/* Es mejor para transiciones*/
+    transition: transform 2s;
+   
+    
+}
+.caja2:hover{
+    transform: scale(1.2, 0.4) translate(100%,100%) skew(20deg);
+    clip-path: polygon(50% 0%,100% 0%,45% 0%,32% 87%,97% 23%);
+   
+
+}
+
+/* _________Background imagen__________________ */
+
+.fondo{
+    height: 360px;
+    width:360px;
+    margin:30px;
+    border: 3px solid black;
+    background-image: url(http://www.nasa.gov/sites/default/files/thumbnails/image/web_first_images_release_0.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin:border-box;
+
+}
+/* ----------------------VARIABLE --------------- */
+
+/* GLOBAL */
+:root{
+    --color-rojo:#f34;
+}
+
+
+.cont-variable{
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border:3px solid black;
+    background:var(--color-rojo);
+}
+
+
+.fondo2{
+    height: 360px;
+    width:360px;
+    margin:30px;
+    border: 3px solid black;
+    background-image: url(http://www.nasa.gov/sites/default/files/thumbnails/image/web_first_images_release_0.png);
+    background-size: cover;
+    filter: blur(5px);
+    filter: contrast(2);
+
+}
+
+.bolas{
+    filter:contrast(30);
+    background-color: #fff;
+}
+
+.bola{
+    display: inline-block;
+    width: 150px;
+    height:150px;
+    background: rgb(6, 15, 189);
+    margin: 40px;
+    border-radius: 50%;
+    filter: blur(10px);
+
+
+}
+.bola:first-child{
+    animation: trasladar 1.6s alternate infinite;
+
+}
+
+
+@keyframes trasladar {
+    0%{
+        transform: translate(0);
+
+    }
+    100%{
+        transform: translate(160px);
+    }
+    
+}
+
+
+
